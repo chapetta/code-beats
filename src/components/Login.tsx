@@ -19,7 +19,7 @@ export default function Login() {
    await  createUser({name: inputValue})
     setInputValue('')
     setIsLoading(false)
-    navigate('search')
+    navigate('/search')
   }
 
   return (
