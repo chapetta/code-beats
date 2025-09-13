@@ -3,6 +3,7 @@ import searchAlbumsAPI from "../services/searchAlbunsAPI";
 import Loading from "./Loading";
 import type { AlbumType } from "../../types";
 import AlbumCard from "./AlbumCard";
+import { Link } from "react-router-dom";
 
 export default function Search () {
   const [inputValue, setInputValue ] = useState<string>('')
@@ -41,12 +42,14 @@ export default function Search () {
         <h3>Resultado de albuns de: {resultAlbuns[0].artistName}</h3>
         <div className="cardList-container">
         {resultAlbuns.map((album) => (
+          <Link to={`/album/{album.collectionId}`} key={album.collectionId}>
           <AlbumCard
             key={album.collectionId}
             artworkUrl100={album.artworkUrl100}
             collectionName={album.collectionName}
-            artistName={album.artistName}
+            artistName={album.artistName}g
             />
+            </Link>
         ))}
         </div>
 
