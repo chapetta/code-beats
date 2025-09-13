@@ -1,4 +1,4 @@
-import type { AlbumType } from '../types';
+import type { AlbumType } from '../../types';
 
 const searchAlbumsAPI = async (artist: string): Promise<AlbumType[]> => {
   const artistNameURL = encodeURI(artist).replaceAll('%20', '+');

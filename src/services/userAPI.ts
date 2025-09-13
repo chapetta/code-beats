@@ -1,4 +1,4 @@
-import type { UserType } from '../types';
+import type { UserType } from '../../types';
 
 const USER_KEY = 'user';
 const TIMEOUT = 1500;

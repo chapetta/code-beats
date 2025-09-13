@@ -1,0 +1,17 @@
+
+.cardList-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ border: solid 1px black;
+ width: 140px;
+ height: 250px;
+ padding: 10px;
+}
