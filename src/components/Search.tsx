@@ -2,6 +2,7 @@ import { useState } from "react";
 import searchAlbumsAPI from "../services/searchAlbunsAPI";
 import Loading from "./Loading";
 import type { AlbumType } from "../types";
+import AlbumCard from "./AlbumCard";
 
 export default function Search () {
   const [inputValue, setInputValue ] = useState<string>('')
@@ -35,6 +36,20 @@ export default function Search () {
           <button onClick={handleButton}>Procurar</button>
         </div>
       )}
+      {resultAlbuns.length > 0 ? 
+      <div>
+        <h3>Resultado de albuns de: {resultAlbuns[0].artistName}</h3>
+        {resultAlbuns.map((album) => (
+          <AlbumCard
+            key={album.collectionId}
+            artworkUrl100={album.artworkUrl100}
+            collectionName={album.collectionName}
+            artistName={album.artistName}
+            />
+        ))}
+
+      </div>  
+      : <h3>Nenhum álbum foi encontrado</h3>}
     </div>
   );
 }
