@@ -2,28 +2,33 @@ import { useParams } from "react-router-dom";
 import MusicCard from "./MusicCard";
 import { useEffect, useState } from "react";
 import getMusics from "../services/musicsAPI";
-import { AlbumType, SongType } from "../../types";
+import type { AlbumType, SongType } from "../../types";
+import Loading from "./Loading";
 
-
-export default function Album () {
-  const [ infoAlbum, setInfoAlbuns ] = useState<AlbumType | SongType>([])
-
+export default function Album() {
+  const [infoAlbum, setInfoAlbuns] = useState<(AlbumType | SongType)[]>([]);
+  const [isLoading, setIsLoading ] = useState<boolean>(false)
 
   const { id } = useParams<{ id: string }>();
 
-  const fetchMusics = async(id: string ) => {
-      const result = await getMusics(id)
-      setInfoAlbuns(result)
- }
-
- 
- useEffect(async () => {
-  await fetchMusics(id)
-}, [])
+  useEffect(() => {
+    const fetchMusics = async (id: string) => {
+      setIsLoading(true)
+      const result = await getMusics(id);
+      setInfoAlbuns(result);
+      setIsLoading(false)
+    };
+    if (id) {
+      fetchMusics(id)
+    }
+  }, [id]);
 
   return (
     <div>
-      <MusicCard />
+      {isLoading ? (
+        <Loading />
+      ) : <MusicCard /> }
+      
     </div>
-  )
+  );
 }
