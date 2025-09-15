@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import getMusics from "../services/musicsAPI";
 import type { AlbumType, SongType } from "../../types";
 import Loading from "./Loading";
+import { MusicCard } from "./MusicCard";
 
 export default function Album() {
   const [infoAlbum, setInfoAlbuns] = useState<(AlbumType | SongType)[]>([]);
@@ -18,7 +19,6 @@ export default function Album() {
       console.log(result)
       setInfoAlbuns(result);
       setIsLoading(false)
-      console.log(id)
     };
     if (id) {
       fetchMusics(id)
@@ -32,8 +32,21 @@ export default function Album() {
       ) : 
       <div>
         {infoAlbum.length > 0 &&
+        <div>
+          <section>
+            <h2>{(infoAlbum[0] as AlbumType).collectionName}</h2>
+            <p>{(infoAlbum[0] as AlbumType).artistName}</p>
+          </section>
 
-          <h2>{(infoAlbum[0] as AlbumType).collectionName}</h2>
+          <section>
+            {infoAlbum.map((music) => (
+              <MusicCard key={(music as SongType).trackId} 
+              music={(music as SongType)}
+              />
+
+            ))}
+          </section>
+        </div>
         }
       </div>
       
