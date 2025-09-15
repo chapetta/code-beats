@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom"
 import Login from "./components/Login"
 import Search from "./components/Search"
 import Album from "./components/Album"
+import { Favorites } from "./components/Favorites"
+import { Profile } from "./components/Profile"
 
 function App() {
 
