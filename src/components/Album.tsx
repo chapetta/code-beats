@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import MusicCard from "./MusicCard";
+// import MusicCard from "./MusicCard";
 import { useEffect, useState } from "react";
 import getMusics from "../services/musicsAPI";
 import type { AlbumType, SongType } from "../../types";
@@ -15,8 +15,10 @@ export default function Album() {
     const fetchMusics = async (id: string) => {
       setIsLoading(true)
       const result = await getMusics(id);
+      console.log(result)
       setInfoAlbuns(result);
       setIsLoading(false)
+      console.log(id)
     };
     if (id) {
       fetchMusics(id)
@@ -27,7 +29,15 @@ export default function Album() {
     <div>
       {isLoading ? (
         <Loading />
-      ) : <MusicCard /> }
+      ) : 
+      <div>
+        {infoAlbum.length > 0 &&
+
+          <h2>{(infoAlbum[0] as AlbumType).collectionName}</h2>
+        }
+      </div>
+      
+      }
       
     </div>
   );
