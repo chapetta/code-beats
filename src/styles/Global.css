@@ -4,9 +4,10 @@
   margin: 0;
 }
 
+
 .header {
-  background-color: #003b29;
-  color: white;
+  background-color: #22577A;
+  color: #C7F9CC;
   font-family: sans-serif;
   width: 100%;
 }
@@ -32,8 +33,8 @@
 .user-info {
   display: flex;
   align-items: center;
-  background: white;
-  color: #003b29;
+  background: #C7F9CC;
+  color: #22577A;
   border-radius: 20px;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
@@ -46,7 +47,7 @@
 }
 
 .navbar {
-  background: #f1f4f3;
+  background: #80ED99;
 }
 .navbar ul {
   display: flex;
@@ -66,7 +67,7 @@
   padding: 1rem;
   font-weight: bold;
   text-decoration: none;  
-  color: #003b29;
+  color: white;
 }
 
 .navbar li:last-child {
@@ -74,7 +75,7 @@
 }
 
 .navbar a.active {
-  background: #008542; 
+  background: #57CC99; 
   color: white;
 }
 
