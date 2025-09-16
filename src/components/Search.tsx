@@ -32,14 +32,19 @@
           {isLoading ? (
             <Loading />
           ) : (
-            <div>
+            <div className="search-container">
               <input
+                className="search-input"
                 type="text"
                 placeholder="Nome do Artista"
                 value={inputValue}
                 onChange={handleChange}
               />
-              <button onClick={handleButton}>Procurar</button>
+              <button
+               onClick={handleButton}
+               className="search-button"
+               >
+                Procurar</button>
             </div>
           )}
           {resultAlbuns.length > 0 ? 

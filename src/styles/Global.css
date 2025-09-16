@@ -79,6 +79,29 @@
   color: white;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  margin: 50px;
+  width: 100%;
+}
+
+.search-input {
+  width: 300px;
+  margin: 20px;
+  height: 30px;
+}
+
+.search-button {
+  width: 150px;
+  height: 30px;
+  color: white;
+  background-color: #FF6700;
+  border: none;
+  border-radius: 10px;
+}
+
 .cardList-container {
   display: flex;
   flex-wrap: wrap;
