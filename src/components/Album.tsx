@@ -5,7 +5,6 @@ import getMusics from "../services/musicsAPI";
 import type { AlbumType, SongType } from "../../types";
 import Loading from "./Loading";
 import { MusicCard } from "./MusicCard";
-import { Header } from "./Header";
 
 export default function Album() {
   const [infoAlbum, setInfoAlbuns] = useState<(AlbumType | SongType)[]>([]);
@@ -28,7 +27,6 @@ export default function Album() {
 
   return (
     <div>
-      <Header />
       {isLoading ? (
         <Loading />
       ) : 

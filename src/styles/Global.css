@@ -6,8 +6,8 @@
 
 
 .header {
-  background-color: #22577A;
-  color: #C7F9CC;
+  background-color: #004E98;
+  color: white;
   font-family: sans-serif;
   width: 100%;
 }
@@ -33,8 +33,8 @@
 .user-info {
   display: flex;
   align-items: center;
-  background: #C7F9CC;
-  color: #22577A;
+  background: white;
+  color: #004E98;
   border-radius: 20px;
   padding: 0.3rem 0.8rem;
   font-size: 0.9rem;
@@ -47,7 +47,7 @@
 }
 
 .navbar {
-  background: #80ED99;
+  background: #C0C0C0;
 }
 .navbar ul {
   display: flex;
@@ -75,7 +75,7 @@
 }
 
 .navbar a.active {
-  background: #57CC99; 
+  background: #3A6EA5; 
   color: white;
 }
 

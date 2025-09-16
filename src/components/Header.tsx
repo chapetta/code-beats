@@ -1,13 +1,37 @@
+import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
+import Loading from "./Loading";
+import { getUser } from "../services/userAPI";
+import type { UserType } from "../../types";
 
 export function Header() {
+  const [isLoading, setIsLoading ] = useState<boolean>(false);
+  const [ user, setUser ] = useState<UserType>({} as UserType)
+
+  useEffect(() => {
+
+    setIsLoading(true)
+    const fetchUser = async () => {
+       const user = await getUser()
+       setUser(user)
+      }
+    fetchUser()
+    if(user) {
+
+      setIsLoading(false)
+    }
+  }, [user])
+
   return (
-    <header className="header">
+    <>
+    {isLoading ? <Loading /> :
+
+<header className="header">
       <div className="header-container">
-        <div className="logo">Code <span>Beats</span></div>
-        <div className="user-info">
+      <div className="logo">Code <span>Beats</span></div>
+      <div className="user-info">
           <img src="/src/assets/profile-picture.png" alt="Usuário" />
-          <span>Usuário</span>
+          <span>{user.name}</span>
         </div>
       </div>
 
@@ -21,15 +45,18 @@ export function Header() {
           <li>
             <NavLink to="/favorites" className={({ isActive }) => isActive ? "active" : ""}>
               Favoritas
-            </NavLink>
-          </li>
+              </NavLink>
+              </li>
           <li>
-            <NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>
-              Perfil
+          <NavLink to="/profile" className={({ isActive }) => isActive ? "active" : ""}>
+          Perfil
             </NavLink>
           </li>
         </ul>
       </nav>
-    </header>
-  )
-}
+      </header>
+      }
+        </>
+    )
+  }
+  

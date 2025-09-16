@@ -6,7 +6,6 @@
     import { Link } from "react-router-dom";
     import { useContext } from "react";
     import { MusicContext } from "../context/MusicContext";
-import { Header } from "./Header";
 
     export default function Search () {
       const [inputValue, setInputValue ] = useState<string>('')
@@ -30,7 +29,6 @@ import { Header } from "./Header";
 
       return (
         <div>
-          <Header />
           {isLoading ? (
             <Loading />
           ) : (
