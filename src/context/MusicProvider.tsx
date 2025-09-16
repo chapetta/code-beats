@@ -1,4 +1,4 @@
-import type { AlbumType } from "../../types";
+import type { AlbumType } from "../types";
 import { MusicContext } from "./MusicContext";
 import { useState, type ReactNode } from 'react';
 

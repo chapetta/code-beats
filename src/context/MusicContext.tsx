@@ -1,5 +1,5 @@
 import { createContext, type Dispatch, type SetStateAction } from "react";
-import type { AlbumType } from "../../types";
+import type { AlbumType } from "../types";
 
 export type MusicContextType = {
   resultAlbuns: AlbumType[];

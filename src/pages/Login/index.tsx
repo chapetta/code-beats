@@ -1,6 +1,6 @@
-import { createUser } from "../services/userAPI"
+import { createUser } from "@services/userAPI"
 import { useState } from "react"
-import Loading from "./Loading"
+import Loading from "@components/Loading"
 import { useNavigate } from "react-router-dom"
 
 export default function Login() {

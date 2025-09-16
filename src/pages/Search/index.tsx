@@ -1,11 +1,11 @@
     import { useState } from "react";
-    import searchAlbumsAPI from "../services/searchAlbunsAPI";
-    import Loading from "./Loading";
-    import type { MusicContextType } from "../context/MusicContext";
-    import AlbumCard from "./AlbumCard";
+    import searchAlbumsAPI from "@services/searchAlbunsAPI";
+    import Loading from "@components/Loading";
+    import type { MusicContextType } from "@context/MusicContext";
+    import AlbumCard from "@components/AlbumCard";
     import { Link } from "react-router-dom";
     import { useContext } from "react";
-    import { MusicContext } from "../context/MusicContext";
+    import { MusicContext } from "@context/MusicContext";
 
     export default function Search () {
       const [inputValue, setInputValue ] = useState<string>('')

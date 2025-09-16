@@ -135,3 +135,37 @@
  padding: 10px;
 }
 
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espaço entre elementos */
+}
+
+.music-card p {
+  margin-right: auto; /* joga o nome da música para a esquerda */
+}
+
+.music-card audio {
+  margin-right: 1rem;
+}
+
+.music-card label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.music-card input[type="checkbox"] {
+  display: none;
+}
+
+.music-card img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.music-card img:hover {
+  transform: scale(1.1);
+}

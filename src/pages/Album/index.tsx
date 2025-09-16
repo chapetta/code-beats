@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 // import MusicCard from "./MusicCard";
 import { useEffect, useState } from "react";
-import getMusics from "../services/musicsAPI";
-import type { AlbumType, SongType } from "../../types";
-import Loading from "./Loading";
-import { MusicCard } from "./MusicCard";
+import getMusics from "@services/musicsAPI";
+import type { AlbumType, SongType } from "@types";
+import Loading from "@components/Loading";
+import { MusicCard } from "@components/MusicCard";
 
 export default function Album() {
   const [infoAlbum, setInfoAlbuns] = useState<(AlbumType | SongType)[]>([]);

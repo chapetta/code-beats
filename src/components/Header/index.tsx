@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
-import Loading from "./Loading";
-import { getUser } from "../services/userAPI";
+import Loading from "../Loading";
+import { getUser } from "@services/userAPI";
 import type { UserType } from "../../types";
 
 export function Header() {
