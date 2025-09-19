@@ -1,45 +1,73 @@
 # 🎵 Code Beats
 
-[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+![Code Beats GIF](./demo.gif)  
+*Veja o app em ação — GIF animado mostrando login, busca de artistas e reprodução de músicas*
 
-Um projeto web interativo que combina **música e programação**, permitindo que o usuário crie batidas, explore sons e aprenda conceitos de código de forma divertida.  
-Feito com **React + TypeScript + TailwindCSS**, trazendo uma interface moderna e responsiva.
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge)](https://react.dev/) 
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge)](https://www.typescriptlang.org/) 
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwind-css&logoColor=white&style=for-the-badge)](https://tailwindcss.com/) 
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge)](https://vitejs.dev/) 
+[![clsx](https://img.shields.io/badge/clsx-000000?logo=javascript&logoColor=white&style=for-the-badge)](https://github.com/lukeed/clsx)
 
 ---
 
-## 📸 Demo / Preview
+## 🚀 Sobre o Projeto
+
+🎵 **Code Beats** é uma aplicação web interativa que permite ao usuário:  
+
+- Fazer login  
+- Pesquisar artistas ou bandas  
+- Listar álbuns disponíveis  
+- Visualizar músicas de um álbum  
+- Reproduzir prévias das músicas  
+- Favoritar e desfavoritar músicas  
+- Visualizar a lista de músicas favoritadas  
+- Visualizar e editar o perfil do usuário  
+
+Feito com **React + TypeScript**, com TailwindCSS planejado para estilização, trazendo uma interface moderna, responsiva e interativa.
+
+---
+
+## 💻 Demo / Preview
 
 ![Code Beats GIF](./demo.gif)  
-*(adicione aqui o GIF ou screenshot da sua aplicação em execução)*  
 
-💻 [Acesse a Demo Online](#) *(adicione link do deploy, se houver)*
+🎬 [Demo Online](#) *(adicione o link do deploy do projeto)*
 
 ---
 
-## 🚀 Tecnologias
+## ✨ Habilidades Desenvolvidas
 
-- ⚛️ [React](https://react.dev/) — Biblioteca para interfaces de usuário  
-- 🟦 [TypeScript](https://www.typescriptlang.org/) — Tipagem estática para JavaScript  
-- 🎨 [TailwindCSS](https://tailwindcss.com/) — Estilização rápida e responsiva  
-- 🌀 [Vite](https://vitejs.dev/) — Build rápido para React  
-- 📦 [clsx](https://github.com/lukeed/clsx) — Utilitário para lidar com classes condicionalmente  
+- Fazer requisições e consumir dados de APIs externas  
+- Utilizar **useState** e **useEffect**  
+- Criar rotas com **BrowserRouter**, **Routes** e **Route** do React Router Dom  
+- Criar links de navegação com o componente **Link**  
+- Testes com **React Testing Library (RTL)**  
+
+---
+
+## 🛠️ Tecnologias
+
+- ⚛️ [React](https://react.dev/)  
+- 🟦 [TypeScript](https://www.typescriptlang.org/)  
+- 🎨 [TailwindCSS](https://tailwindcss.com/) *(em implementação)*  
+- 🌀 [Vite](https://vitejs.dev/)  
+- 📦 [clsx](https://github.com/lukeed/clsx)  
 
 ---
 
 ## 📂 Estrutura do Projeto
 
 code-beats/
-├── public/ # Arquivos públicos
+├── public/
 ├── src/
 │ ├── assets/ # Imagens, ícones e sons
-│ ├── components/ # Componentes reutilizáveis
-│ ├── contexts/ # Contextos (ex: ThemeProvider)
+│ ├── components/ # Componentes reutilizáveis (Header, Layout, MusicCard, AlbumCard, Loading)
+│ ├── contexts/ # Contextos (ex: MusicContext)
 │ ├── hooks/ # Hooks customizados
-│ ├── pages/ # Páginas principais
-│ ├── styles/ # Estilos globais
+│ ├── pages/ # Páginas (Login, Search, Album, Favorites, Profile)
+│ ├── services/ # Funções para consumir APIs (musicsAPI, searchAlbumsAPI, userAPI)
+│ ├── styles/ # Estilos globais / TailwindCSS
 │ └── App.tsx # Componente raiz
 ├── package.json
 └── README.md
@@ -47,17 +75,22 @@ code-beats/
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades Principais
 
-- 🎼 Criação de batidas com interface amigável  
-- 🎚️ Controle de intensidade e tempo  
-- 🌙 Alternância de tema (light/dark)  
-- 📱 Design responsivo para desktop e mobile  
-- 🔊 Reproduzir, pausar e salvar faixas favoritas  
+<div align="center">
+
+[![Login](https://img.shields.io/badge/👤%20Login-FFB800?style=for-the-badge)]()  
+[![Pesquisar Artista](https://img.shields.io/badge/🔍%20Pesquisar%20Artista-00C0FF?style=for-the-badge)]()  
+[![Listar Álbuns](https://img.shields.io/badge/💿%20Listar%20Álbuns-8E44AD?style=for-the-badge)]()  
+[![Reproduzir Músicas](https://img.shields.io/badge/🔊%20Reproduzir%20Músicas-27AE60?style=for-the-badge)]()  
+[![Favoritar Músicas](https://img.shields.io/badge/⭐%20Favoritar%20Músicas-F39C12?style=for-the-badge)]()  
+[![Editar Perfil](https://img.shields.io/badge/📝%20Editar%20Perfil-FF5733?style=for-the-badge)]()
+
+</div>
 
 ---
 
-## 🛠️ Como rodar o projeto
+## 🛠️ Como Rodar o Projeto
 
 ```bash
 # Clonar o repositório
@@ -77,22 +110,11 @@ npm run build
 
 📌 Contribuição
 
-    Faça um fork do projeto
-
-    Crie uma branch com sua feature:
-
-git checkout -b minha-feature
-
-    Commit suas mudanças:
-
-git commit -m "feat: minha nova feature"
-
-    Push da branch:
-
-git push origin minha-feature
-
-    Abra um Pull Request 🚀
-
+1️⃣ Faça um fork do projeto
+2️⃣ Crie sua branch: git checkout -b minha-feature
+3️⃣ Commit: git commit -m "feat: minha nova feature"
+4️⃣ Push: git push origin minha-feature
+5️⃣ Abra um Pull Request 🚀
 📄 Licença
 
 Este projeto está sob a licença MIT.
