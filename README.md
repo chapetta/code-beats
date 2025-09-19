@@ -1,29 +1,36 @@
-# ✅ ToDo List - React + Tailwind + TypeScript
+# 🎵 Code Beats (TrybeTunes)
 
-Uma aplicação de **ToDo List** moderna feita com **React, Vite, TypeScript e TailwindCSS**, com suporte a **tema claro/escuro**, filtragem de tarefas (**All, Active, Completed**) e interface responsiva.  
+Aplicação desenvolvida em **React + TypeScript + Vite**, que consome a API do iTunes para pesquisar artistas, listar álbuns, ouvir prévias de músicas, favoritar/desfavoritar faixas e gerenciar o perfil da pessoa usuária.  
+
+Este projeto foi construído com foco em **boas práticas, testes automatizados e experiência de usuário**, simulando um player musical moderno.
 
 ---
 
-## 📌 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 - ⚛️ [React](https://react.dev/)  
 - ⚡ [Vite](https://vitejs.dev/)  
 - 📘 [TypeScript](https://www.typescriptlang.org/)  
-- 🎨 [TailwindCSS](https://tailwindcss.com/)  
-- 🌓 Context API para gerenciamento de tema (Light/Dark)  
-- 🔧 [clsx](https://www.npmjs.com/package/clsx) para manipulação de classes CSS  
+- 🎨 [TailwindCSS](https://tailwindcss.com/) (estilização responsiva)  
+- 🛣️ [React Router DOM](https://reactrouter.com/)  
+- 🎧 API pública do [iTunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/)  
+- 🧪 [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) + [Jest](https://jestjs.io/)  
+- 🎯 Context API para gerenciamento de estado  
 
 ---
 
 ## ✨ Funcionalidades
 
-- [x] Adicionar novas tarefas  
-- [x] Marcar tarefas como concluídas  
-- [x] Filtrar por **All / Active / Completed**  
-- [x] Contador de tarefas restantes  
-- [x] Limpar tarefas concluídas  
-- [x] Suporte a **tema claro e escuro**  
-- [x] Layout responsivo (desktop e mobile)  
+- [x] **Login** com persistência local do usuário  
+- [x] **Pesquisar** por artista ou banda  
+- [x] **Listar álbuns** disponíveis de cada artista  
+- [x] **Visualizar músicas** de um álbum selecionado  
+- [x] **Reproduzir prévia** das faixas (30 segundos)  
+- [x] **Favoritar e desfavoritar** músicas  
+- [x] **Visualizar lista de favoritas**  
+- [x] **Perfil do usuário** (com edição de nome, email e descrição)  
+- [x] Interface **responsiva** (desktop e mobile)  
+- [ ] Testes unitários e de integração com **RTL + Jest** (em desenvolvimento)  
 
 ---
 
@@ -31,13 +38,17 @@ Uma aplicação de **ToDo List** moderna feita com **React, Vite, TypeScript e T
 
 ```bash
 .
-├── public/               # Arquivos estáticos (ícones, imagens, etc.)
+├── public/               # Arquivos estáticos
 ├── src/
-│   ├── components/       # Componentes reutilizáveis (TodoList, etc.)
-│   ├── contexts/         # Context API (ThemeProvider, ThemeContext)
-│   ├── styles/           # Estilos globais
-│   ├── App.tsx           # Componente principal
-│   └── main.tsx          # Ponto de entrada do React
+│   ├── assets/           # Imagens e ícones
+│   ├── components/       # Componentes reutilizáveis (Header, MusicCard, etc.)
+│   ├── context/          # MusicContext + Provider
+│   ├── pages/            # Páginas (Login, Search, Album, Favorites, Profile)
+│   ├── services/         # Funções para consumo da API do iTunes
+│   ├── styles/           # Estilos globais (TailwindCSS)
+│   ├── types/            # Tipagens TypeScript (UserType, AlbumType, SongType)
+│   ├── App.tsx           # Rotas principais
+│   └── main.tsx          # Ponto de entrada
 ├── package.json
 ├── tailwind.config.js    # Configuração do Tailwind
 └── README.md             # Este arquivo :)
@@ -46,71 +57,58 @@ Uma aplicação de **ToDo List** moderna feita com **React, Vite, TypeScript e T
 
 Clone o repositório e instale as dependências:
 
-git clone https://github.com/SEU_USUARIO/todo-list-react-tailwind.git
-cd todo-list-react-tailwind
+git clone https://github.com/SEU_USUARIO/code-beats.git
+cd code-beats
 npm install
 
 ▶️ Rodando o projeto
 
 npm run dev
 
-O projeto ficará disponível em:
-👉 http://localhost:5173
+Acesse em: 👉 http://localhost:5173
 📦 Build de produção
 
 npm run build
-
-Para pré-visualizar o build:
-
 npm run preview
 
-🎨 Temas (Light/Dark)
+🧪 Testes
 
-O projeto possui um ThemeProvider que controla automaticamente o tema.
+Este projeto utiliza React Testing Library para testes de componentes e integração.
 
-Exemplo de uso no código:
+Rodar todos os testes:
 
-import { useContext } from "react";
-import { ThemeContext } from "./contexts/ThemeContext";
+npm run test
 
-function App() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+🎨 Screenshots
+🔑 Login
 
-  return (
-    <div className={theme}>
-      <button onClick={toggleTheme}>Mudar tema</button>
-    </div>
-  );
-}
+🎧 Pesquisa de artista
 
-export default App;
+🎶 Player de músicas
 
 ✅ Scripts Disponíveis
 
     npm run dev → Inicia servidor de desenvolvimento
 
-    npm run build → Gera build otimizado para produção
+    npm run build → Gera build otimizado
 
-    npm run preview → Pré-visualiza o build localmente
+    npm run preview → Pré-visualiza o build local
 
-🖼️ Screenshots
-💻 Desktop
-
-📱 Mobile
+    npm run test → Executa testes com RTL
 
 🤝 Contribuindo
 
-Se quiser contribuir com melhorias:
+Contribuições são bem-vindas!
 
-    Faça um fork do repositório
+    Faça um fork do projeto
 
-    Crie uma branch:
+    Crie uma branch para sua feature:
 
 git checkout -b minha-feature
 
 Commit suas mudanças:
 
-git commit -m "Adicionei uma nova feature"
+git commit -m "Adicionei nova feature"
 
 Push para a branch:
 
