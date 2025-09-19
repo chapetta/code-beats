@@ -1,22 +1,28 @@
 # 🎵 Code Beats
 
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+
 Um projeto web interativo que combina **música e programação**, permitindo que o usuário crie batidas, explore sons e aprenda conceitos de código de forma divertida.  
-Feito com **React + TailwindCSS**, trazendo uma interface moderna e responsiva.
+Feito com **React + TypeScript + TailwindCSS**, trazendo uma interface moderna e responsiva.
 
 ---
 
-## 📸 Preview
+## 📸 Demo / Preview
 
-![Code Beats Screenshot](./screenshot.png)  
-*(adicione aqui a imagem da sua aplicação em execução)*
+![Code Beats GIF](./demo.gif)  
+*(adicione aqui o GIF ou screenshot da sua aplicação em execução)*  
+
+💻 [Acesse a Demo Online](#) *(adicione link do deploy, se houver)*
 
 ---
 
 ## 🚀 Tecnologias
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
-
 - ⚛️ [React](https://react.dev/) — Biblioteca para interfaces de usuário  
+- 🟦 [TypeScript](https://www.typescriptlang.org/) — Tipagem estática para JavaScript  
 - 🎨 [TailwindCSS](https://tailwindcss.com/) — Estilização rápida e responsiva  
 - 🌀 [Vite](https://vitejs.dev/) — Build rápido para React  
 - 📦 [clsx](https://github.com/lukeed/clsx) — Utilitário para lidar com classes condicionalmente  
@@ -41,9 +47,17 @@ code-beats/
 
 ---
 
-## 🛠️ Como rodar o projeto
+## ✨ Funcionalidades
 
-Clone o repositório e instale as dependências:
+- 🎼 Criação de batidas com interface amigável  
+- 🎚️ Controle de intensidade e tempo  
+- 🌙 Alternância de tema (light/dark)  
+- 📱 Design responsivo para desktop e mobile  
+- 🔊 Reproduzir, pausar e salvar faixas favoritas  
+
+---
+
+## 🛠️ Como rodar o projeto
 
 ```bash
 # Clonar o repositório
@@ -55,53 +69,36 @@ cd code-beats
 # Instalar dependências
 npm install
 
-Rodar o projeto em ambiente de desenvolvimento:
-
+# Rodar em ambiente de desenvolvimento
 npm run dev
 
-Gerar build de produção:
-
+# Gerar build de produção
 npm run build
-
-✨ Funcionalidades
-
-    🎼 Criação de batidas com interface amigável
-
-    🎚️ Controle de intensidade e tempo
-
-    🌙 Alternância de tema (light/dark)
-
-    📱 Design responsivo para desktop e mobile
 
 📌 Contribuição
 
-Se quiser contribuir com o projeto:
-
-    Faça um fork
+    Faça um fork do projeto
 
     Crie uma branch com sua feature:
 
 git checkout -b minha-feature
 
-Commit suas mudanças:
+    Commit suas mudanças:
 
 git commit -m "feat: minha nova feature"
 
-Faça o push:
+    Push da branch:
 
-    git push origin minha-feature
+git push origin minha-feature
 
     Abra um Pull Request 🚀
 
 📄 Licença
 
 Este projeto está sob a licença MIT.
-Veja o arquivo LICENSE
-
-para mais detalhes.
+Veja o arquivo LICENSE para mais detalhes.
 👨‍💻 Autor
 
 Feito com ❤️ por Yan Chapetta 🚀
-📩 [Seu LinkedIn](https://www.linkedin.com/in/yan-chapetta/)
-| 🌐 [Protfólio](Em construção
-
+📩 LinkedIn
+| 🌐 Portfólio: Em construção
