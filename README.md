@@ -61,14 +61,14 @@ Feito com **React + TypeScript**, com TailwindCSS planejado para estilização, 
 code-beats/  
 ├── public/  
 ├── src/  
-│   ├── assets/               # Imagens, ícones e sons  
-│   ├── components/           # Componentes reutilizáveis (Header, Layout, MusicCard, AlbumCard, Loading)  
-│   ├── contexts/             # Contextos (ex: MusicContext)  
-│   ├── hooks/                # Hooks customizados  
-│   ├── pages/                # Páginas (Login, Search, Album, Favorites, Profile)  
-│   ├── services/             # Funções para consumir APIs (musicsAPI, searchAlbumsAPI, userAPI)  
-│   ├── styles/               # Estilos globais / TailwindCSS  
-│   └── App.tsx               # Componente raiz  
+│   ├── assets/ &nbsp&nbsp&nbsp&nbsp&nbsp# Imagens, ícones e sons  
+│   ├── components/        &nbsp&nbsp&nbsp&nbsp&nbsp    # Componentes reutilizáveis (Header, Layout, MusicCard, AlbumCard, Loading)  
+│   ├── contexts/        &nbsp&nbsp&nbsp&nbsp&nbsp      # Contextos (ex: MusicContext)  
+│   ├── hooks/           &nbsp&nbsp&nbsp&nbsp&nbsp      # Hooks customizados  
+│   ├── pages/         &nbsp&nbsp&nbsp&nbsp&nbsp        # Páginas (Login, Search, Album, Favorites, Profile)  
+│   ├── services/      &nbsp&nbsp&nbsp&nbsp&nbsp        # Funções para consumir APIs (musicsAPI, searchAlbumsAPI, userAPI)  
+│   ├── styles/         &nbsp&nbsp&nbsp&nbsp&nbsp       # Estilos globais / TailwindCSS  
+│   └── App.tsx        &nbsp&nbsp&nbsp&nbsp&nbsp        # Componente raiz  
 ├── package.json  
 └── README.md  
 
