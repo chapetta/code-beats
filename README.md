@@ -1,69 +1,124 @@
-# React + TypeScript + Vite
+# ✅ ToDo List - React + Tailwind + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação de **ToDo List** moderna feita com **React, Vite, TypeScript e TailwindCSS**, com suporte a **tema claro/escuro**, filtragem de tarefas (**All, Active, Completed**) e interface responsiva.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ [React](https://react.dev/)  
+- ⚡ [Vite](https://vitejs.dev/)  
+- 📘 [TypeScript](https://www.typescriptlang.org/)  
+- 🎨 [TailwindCSS](https://tailwindcss.com/)  
+- 🌓 Context API para gerenciamento de tema (Light/Dark)  
+- 🔧 [clsx](https://www.npmjs.com/package/clsx) para manipulação de classes CSS  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [x] Adicionar novas tarefas  
+- [x] Marcar tarefas como concluídas  
+- [x] Filtrar por **All / Active / Completed**  
+- [x] Contador de tarefas restantes  
+- [x] Limpar tarefas concluídas  
+- [x] Suporte a **tema claro e escuro**  
+- [x] Layout responsivo (desktop e mobile)  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Estrutura do Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+.
+├── public/               # Arquivos estáticos (ícones, imagens, etc.)
+├── src/
+│   ├── components/       # Componentes reutilizáveis (TodoList, etc.)
+│   ├── contexts/         # Context API (ThemeProvider, ThemeContext)
+│   ├── styles/           # Estilos globais
+│   ├── App.tsx           # Componente principal
+│   └── main.tsx          # Ponto de entrada do React
+├── package.json
+├── tailwind.config.js    # Configuração do Tailwind
+└── README.md             # Este arquivo :)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⚙️ Instalação e Uso
+
+Clone o repositório e instale as dependências:
+
+git clone https://github.com/SEU_USUARIO/todo-list-react-tailwind.git
+cd todo-list-react-tailwind
+npm install
+
+▶️ Rodando o projeto
+
+npm run dev
+
+O projeto ficará disponível em:
+👉 http://localhost:5173
+📦 Build de produção
+
+npm run build
+
+Para pré-visualizar o build:
+
+npm run preview
+
+🎨 Temas (Light/Dark)
+
+O projeto possui um ThemeProvider que controla automaticamente o tema.
+
+Exemplo de uso no código:
+
+import { useContext } from "react";
+import { ThemeContext } from "./contexts/ThemeContext";
+
+function App() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  return (
+    <div className={theme}>
+      <button onClick={toggleTheme}>Mudar tema</button>
+    </div>
+  );
+}
+
+export default App;
+
+✅ Scripts Disponíveis
+
+    npm run dev → Inicia servidor de desenvolvimento
+
+    npm run build → Gera build otimizado para produção
+
+    npm run preview → Pré-visualiza o build localmente
+
+🖼️ Screenshots
+💻 Desktop
+
+📱 Mobile
+
+🤝 Contribuindo
+
+Se quiser contribuir com melhorias:
+
+    Faça um fork do repositório
+
+    Crie uma branch:
+
+git checkout -b minha-feature
+
+Commit suas mudanças:
+
+git commit -m "Adicionei uma nova feature"
+
+Push para a branch:
+
+    git push origin minha-feature
+
+    Abra um Pull Request 🚀
+
+📜 Licença
+
+Este projeto está sob a licença MIT.
+Sinta-se livre para usar, modificar e compartilhar.
