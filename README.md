@@ -1,122 +1,107 @@
-# 🎵 Code Beats (TrybeTunes)
+# 🎵 Code Beats
 
-Aplicação desenvolvida em **React + TypeScript + Vite**, que consome a API do iTunes para pesquisar artistas, listar álbuns, ouvir prévias de músicas, favoritar/desfavoritar faixas e gerenciar o perfil da pessoa usuária.  
-
-Este projeto foi construído com foco em **boas práticas, testes automatizados e experiência de usuário**, simulando um player musical moderno.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- ⚛️ [React](https://react.dev/)  
-- ⚡ [Vite](https://vitejs.dev/)  
-- 📘 [TypeScript](https://www.typescriptlang.org/)  
-- 🎨 [TailwindCSS](https://tailwindcss.com/) (estilização responsiva)  
-- 🛣️ [React Router DOM](https://reactrouter.com/)  
-- 🎧 API pública do [iTunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/)  
-- 🧪 [React Testing Library (RTL)](https://testing-library.com/docs/react-testing-library/intro/) + [Jest](https://jestjs.io/)  
-- 🎯 Context API para gerenciamento de estado  
+Um projeto web interativo que combina **música e programação**, permitindo que o usuário crie batidas, explore sons e aprenda conceitos de código de forma divertida.  
+Feito com **React + TailwindCSS**, trazendo uma interface moderna e responsiva.
 
 ---
 
-## ✨ Funcionalidades
+## 📸 Preview
 
-- [x] **Login** com persistência local do usuário  
-- [x] **Pesquisar** por artista ou banda  
-- [x] **Listar álbuns** disponíveis de cada artista  
-- [x] **Visualizar músicas** de um álbum selecionado  
-- [x] **Reproduzir prévia** das faixas (30 segundos)  
-- [x] **Favoritar e desfavoritar** músicas  
-- [x] **Visualizar lista de favoritas**  
-- [x] **Perfil do usuário** (com edição de nome, email e descrição)  
-- [x] Interface **responsiva** (desktop e mobile)  
-- [ ] Testes unitários e de integração com **RTL + Jest** (em desenvolvimento)  
+![Code Beats Screenshot](./screenshot.png)  
+*(adicione aqui a imagem da sua aplicação em execução)*
+
+---
+
+## 🚀 Tecnologias
+
+Este projeto foi desenvolvido com as seguintes tecnologias:
+
+- ⚛️ [React](https://react.dev/) — Biblioteca para interfaces de usuário  
+- 🎨 [TailwindCSS](https://tailwindcss.com/) — Estilização rápida e responsiva  
+- 🌀 [Vite](https://vitejs.dev/) — Build rápido para React  
+- 📦 [clsx](https://github.com/lukeed/clsx) — Utilitário para lidar com classes condicionalmente  
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-```bash
-.
-├── public/               # Arquivos estáticos
+code-beats/
+├── public/ # Arquivos públicos
 ├── src/
-│   ├── assets/           # Imagens e ícones
-│   ├── components/       # Componentes reutilizáveis (Header, MusicCard, etc.)
-│   ├── context/          # MusicContext + Provider
-│   ├── pages/            # Páginas (Login, Search, Album, Favorites, Profile)
-│   ├── services/         # Funções para consumo da API do iTunes
-│   ├── styles/           # Estilos globais (TailwindCSS)
-│   ├── types/            # Tipagens TypeScript (UserType, AlbumType, SongType)
-│   ├── App.tsx           # Rotas principais
-│   └── main.tsx          # Ponto de entrada
+│ ├── assets/ # Imagens, ícones e sons
+│ ├── components/ # Componentes reutilizáveis
+│ ├── contexts/ # Contextos (ex: ThemeProvider)
+│ ├── hooks/ # Hooks customizados
+│ ├── pages/ # Páginas principais
+│ ├── styles/ # Estilos globais
+│ └── App.tsx # Componente raiz
 ├── package.json
-├── tailwind.config.js    # Configuração do Tailwind
-└── README.md             # Este arquivo :)
+└── README.md
 
-⚙️ Instalação e Uso
+
+---
+
+## 🛠️ Como rodar o projeto
 
 Clone o repositório e instale as dependências:
 
-git clone https://github.com/SEU_USUARIO/code-beats.git
+```bash
+# Clonar o repositório
+git clone https://github.com/SEU-USUARIO/code-beats.git
+
+# Entrar na pasta
 cd code-beats
+
+# Instalar dependências
 npm install
 
-▶️ Rodando o projeto
+Rodar o projeto em ambiente de desenvolvimento:
 
 npm run dev
 
-Acesse em: 👉 http://localhost:5173
-📦 Build de produção
+Gerar build de produção:
 
 npm run build
-npm run preview
 
-🧪 Testes
+✨ Funcionalidades
 
-Este projeto utiliza React Testing Library para testes de componentes e integração.
+    🎼 Criação de batidas com interface amigável
 
-Rodar todos os testes:
+    🎚️ Controle de intensidade e tempo
 
-npm run test
+    🌙 Alternância de tema (light/dark)
 
-🎨 Screenshots
-🔑 Login
+    📱 Design responsivo para desktop e mobile
 
-🎧 Pesquisa de artista
+📌 Contribuição
 
-🎶 Player de músicas
+Se quiser contribuir com o projeto:
 
-✅ Scripts Disponíveis
+    Faça um fork
 
-    npm run dev → Inicia servidor de desenvolvimento
-
-    npm run build → Gera build otimizado
-
-    npm run preview → Pré-visualiza o build local
-
-    npm run test → Executa testes com RTL
-
-🤝 Contribuindo
-
-Contribuições são bem-vindas!
-
-    Faça um fork do projeto
-
-    Crie uma branch para sua feature:
+    Crie uma branch com sua feature:
 
 git checkout -b minha-feature
 
 Commit suas mudanças:
 
-git commit -m "Adicionei nova feature"
+git commit -m "feat: minha nova feature"
 
-Push para a branch:
+Faça o push:
 
     git push origin minha-feature
 
     Abra um Pull Request 🚀
 
-📜 Licença
+📄 Licença
 
 Este projeto está sob a licença MIT.
-Sinta-se livre para usar, modificar e compartilhar.
+Veja o arquivo LICENSE
+
+para mais detalhes.
+👨‍💻 Autor
+
+Feito com ❤️ por Yan Chapetta 🚀
+📩 [Seu LinkedIn](https://www.linkedin.com/in/yan-chapetta/)
+| 🌐 [Protfólio](Em construção
+
